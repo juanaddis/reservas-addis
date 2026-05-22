@@ -415,7 +415,6 @@ async function loadFromSupabase() {
 
 async function saveToSupabase(res) {
   const { data, error } = await supaClient.from('reservas').insert([{
-    id: res.id,
     device_id: res.objId,
     date: res.date,
     start: res.start,
